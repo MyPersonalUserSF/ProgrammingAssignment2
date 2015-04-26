@@ -1,0 +1,259 @@
+myApp
+github_token <- oauth2.0_token(oauth_endpoints("github"), myApp)
+github_token
+gtoken <- config(token = github_token)
+gtoken
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+req
+??GET
+rm(req)
+req <- with_config(gtoken, GET("https://api.github.com/users/jtleek/repos"))
+req
+rm(myApp)
+rm(github_token)
+myApp <- oauth_app("Coursera_GaCD_Week2_Quiz_App", #
+	key="2df506f8ee9c058d8cec",#
+	secret="e2a1a8bdac58ccf7eb8d5f4aa8541e74d271e364")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myApp)
+library(httr)
+oauth_endpoints("github")
+myApp <- oauth_app("Coursera_GaCD_Week2_Quiz_App", #
+	key="2df506f8ee9c058d8cec",#
+	secret="e2a1a8bdac58ccf7eb8d5f4aa8541e74d271e364")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myApp)
+gtoken <- config(token = github_token)
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+req
+github_token <- oauth2.0_token(oauth_endpoints("github"), myApp, cache=FALSE)
+remove(httr)
+library/require(httr)
+library(httr)
+oauth_endpoints("github")
+myApp <- oauth_app("Coursera_GaCD_Week2_Quiz_App", #
+	key="2df506f8ee9c058d8cec",#
+	secret=NULL)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myApp, cache=FALSE)
+library(httpuv)
+ls()
+rm(github_token)
+rm(gtoken)
+rm(homeTL)
+rm(json1)
+rm(json2)
+rm(myApp)
+rm(req)
+rm(sign_on)
+ls()
+library(httr)
+oauth_endpoints("github")
+myApp <- oauth_app("Coursera_GaCD_Week2_Quiz_App", #
+	key="2df506f8ee9c058d8cec",#
+	secret="e2a1a8bdac58ccf7eb8d5f4aa8541e74d271e364")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myApp, cache=FALSE)
+x <- matrix(rnorm(200), 20, 10)
+x
+class(x)
+x <- data.frame(rnorm(200), 20, 10)
+x
+z
+x <- matrix(rnorm(200), 20, 10)
+z <- data.frame(rnorm(200), 20, 10)
+x
+z
+class(x)
+class(z)
+apply(x, 2, mean)
+apply(x, 1, sum)
+apply(z, 1, sum)
+z[1]
+apply(z, 1, sum)
+z[,1:2]
+z[[1,1:3]]
+z[,1:3]
+apply(z, 1, sum)
+rm(z)
+library(datasets)#
+data(iris)
+?iris
+class(iris)
+dim(iris)
+apply(iris, 1, sum)
+names(iris)
+colMean(iris$Sepal.Length)
+colMeanx(iris$Sepal.Length)
+colMeans(iris$Sepal.Length)
+lapply(iris$Sepal.Length, mean)
+names(iris)
+library(sqldf)
+sqldf(iris, "Select Sepal.Length from iris where Species = "virginica"")
+v = "virginica"
+sqldf(iris, "Select Sepal.Length from iris where Species = v")
+sqldf(iris, "Select Sepal.Length from iris where Species = 'virginica'")
+iris
+iris3
+iris
+head(iris)
+sqldf("Select Sepal.Length from iris where Species = 'virginica'")
+sqldf("Select iris.Sepal.Length from iris where Species = 'virginica'")
+sqldf("Select iris$Sepal.Length from iris where Species = 'virginica'")
+sqldf(iris, "Select count(*) from iris")
+sqldf("Select count(*) from iris")
+sqldf("Select * from iris max=5")
+sqldf("Select * from iris")
+head(iris)
+sqldf("Select Sepal.Length from iris")
+sqldf("Select 'Sepal.Length' from iris")
+sqldf("Select iris.Sepal.Length from iris")
+??sqldf
+head(iris)
+sqldf("Select * from iris where 'Species' = 'virginica'")
+sqldf("Select * from iris where 'Species' like '*virginica*'")
+sqldf("Select iris.Species from iris")
+sqldf("Select * from iris where 'Species=virginica'")
+head(iris)
+sqldf()
+sqldf("select count(*) from iris where Species = 'setosa'")
+sqldf("select count(*) from iris where Species = 'virginica'")
+sqldf("select count(*) from iris where Species = 'setosa'")
+rm(iris)
+sqldf("select count(*) from iris where Species = 'setosa'")
+sqldf(close)
+sqldf("select count(*) from iris where Species = 'setosa'")
+ls()
+rm(v)
+rm(x)
+library(sqldf)
+head(iris)
+sqldf("select count(*) from iris where Species = 'setosa'")
+datasetsDb()
+dbListTables(datasetsDb())
+dbDisconnect(datasetsDb())
+sqldf("select count(*) from iris where Species = 'setosa'")
+iris
+sqldf("select count(*) from iris where Species = 'virginica'")
+library(sqldf)
+iris
+sqldf('select count(*) from iris')
+sqldf('select Species, count(*) from iris group by Species')
+sqldf('select * from iris where Species="virginica"')
+sqldf('select * from iris where Species="virginica" and Sepal.Length>6.0')
+sqldf('select * from iris where Species="virginica" and Petal.Length>6.0')
+sqldf('select * from iris where Species="virginica" and "Petal.Length">6.0')
+sqldf('select * from iris where Species="virginica" and "Sepal.Length">6.0')
+sqldf('select * from iris where Species="virginica" and "Sepal.Length">7.0')
+sqldf('select sum("Sepal.Length") from iris where Species="virginica"')
+sqldf('select mean("Sepal.Length") from iris where Species="virginica"')
+sqldf('select average("Sepal.Length") from iris where Species="virginica"')
+sqldf('select avg("Sepal.Length") from iris where Species="virginica"')
+rowMeans(iris[, 1])
+apply(iris, 2, mean)
+apply(iris[, 1], 1, mean)
+apply(iris[, 1], 2, mean)
+apply(iris[, 1:4], 1, mean)
+apply(iris[, 1:4], 2, mean)
+apply(iris[, 1:1], 2, mean)
+apply(iris[, 1:4], 2, mean)
+z <- data.frame(sqldf("select * from iris where Species='virginica'"))
+z
+apply(z[, 1:4], 2, mean)
+rm(z)
+mtcars
+head(mtcars)
+sapply(mtcars, cyl, mean)
+mean(mtcars$mpg, mtcars$cyl)
+apply(mtcars, 2, mean)
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+sqldf("select cyl, avg(mpg) from mtcars group by cyl")
+sqldf("select cyl, avg(hp) from mtcars group by cyl")
+sapply(split(mtcars$hp, mtcars$cyl), mean)
+m <- sapply(split(mtcars$hp, mtcars$cyl), mean)
+m[3] - m[1]
+rm(m)
+ls
+ls()
+mtcars
+mapply(rep, 1:4, 4:1)
+noise <- function(, mean, sd) {rnorm(n), mean, sd}
+noise <- function(, mean, sd) {rnorm(n, mean, sd)}
+noise <- function(n, mean, sd) {rnorm(n, mean, sd)}
+noise(5, 1, 2)
+noise(1:5, 1:5, 2)
+mapply(noise, 1:5, 1:5, 2)
+x <- c(rnorm(10), runif(10), rnorm(10, 1))
+f <- gl(3, 10)
+x
+f
+tapply(x, f, sum)
+tapply(x, f, mean)
+iris
+f
+f <- gl(3, 50)
+f
+tapply(iris$Petal.Length, f, mean)
+tapply(iris$Sepal.Length, f, mean)
+mtcars
+tapply(iris$Petal.Length, f, mean)
+class(tapply(iris$Petal.Length, f, mean))
+class(tapply(iris$Petal.Length, f, mean), simplify=F)
+i <- sapply(split(iris$Petal.Length, iris$Species), mean)
+i
+sapply(split(iris$Sepal.Length, iris$Species), mean)
+sqldf('select avg("Sepal.Length") from iris where Species="virginica"')
+i <- sapply(split(iris$Sepal.Length, iris$Species), mean)
+sapply(split(iris$Sepal.Length, iris$Species), mean)
+tapply(iris$Sepal.Length, f, mean)
+iris
+head(iris)
+split(iris[, 2], iris[, 4])
+mean(x)
+rm(ls())
+rm(x)
+mean(x)
+trackback()
+traceback()
+traceback() l: mean(x)
+traceback()
+mean(x)
+traceback()
+ls()
+debug(noise)
+noise(1, 2, 3)
+debug(ls)
+ls()
+source("cachematrix.R")
+ls
+pwd
+ls()
+z <- makeCacheMatrix()
+z
+z <- makeCacheMatrix(c(1:5), c(5:1))
+m <- matrix(c(-1, -2, 1, 1), 2,2)
+x <- makeCacheMatrix(m)
+x$get()
+inv <- cacheSolve(x)
+inv
+inv <- cacheSolve(x)
+inv
+x$getInverse
+x$getInverse()
+x$getInverse()
+source("cachematrix.R")
+inv <- cacheSolve(x)
+inv <- cacheSolve(x)
+inv <- cacheSolve(x)
+source("cachematrix.R")
+x <- makeCacheMatrix(m)
+inv <- cacheSolve(x)
+inv <- cacheSolve(x)
+ls()
+rm(list=lst())
+rm(list=ls())
+source("cachematrix.R")
+m <- matrix(c(-1, -2, 1, 1), 2,2)
+x <- makeCacheMatrix(m)
+x
+x$get()
+inv <- cacheSolve(x)
+inv
+inv <- cacheSolve(x)
+inv
